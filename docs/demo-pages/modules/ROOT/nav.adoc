@@ -6,7 +6,7 @@
 * xref:blocks.adoc[Blocks & Quotes]
 * xref:lists.adoc[Lists]
 * xref:images.adoc[Images & Media]
-* .Extensions
+* . Extensions
 ** xref:extensions/overview.adoc[Extensions Overview]
 ** xref:extensions/lunr-search.adoc[Lunr search]
 ** xref:extensions/tabs.adoc[Tabs]
