@@ -131,7 +131,7 @@ link:https://github.com/antora-supplemental/facto-stack[`facto-stack`^] `demo/pl
 
 . `theme-demo` from this repo (git URL)
 . `facto-stack` from `facto-stack/demo/docs` (Mermaid client, lightbox, SoftNav)
-. `@antora-supplemental/facto-stack` `profile: demo` with `siteNavTree.include: [facto-stack, theme-demo]`
+. `@antora-supplemental/facto-stack` `profile: demo` with `siteNavTree.include: [home, theme-demo]`
 
 Optional: add the `site-nav-tree` fixture source and extend the allowlist — documented in the fixture README.
 

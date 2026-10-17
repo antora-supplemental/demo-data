@@ -9,6 +9,7 @@
 
 === Changed
 
+* README: facto-stack `siteNavTree` example uses `[home, theme-demo]` after stack pages merged into `home`.
 * README catalog links use unversioned docs hub URLs (`/docs/proposals/demo-data-catalog/`).
 * link:docs/theme-demo/modules/ROOT/pages/migration.adoc[Migration checklist] — valentus-theme cutover complete; URL mapping for GitHub Pages documented.
 
