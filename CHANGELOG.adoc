@@ -1,5 +1,11 @@
 = Changelog
 
+== 0.3.1 — 2026-10-17
+
+=== Changed
+
+* Baseline `demo-pages` forest root title **antora-core** (component name unchanged); flat `nav.adoc` with **Overview** on the index (removed **Body fixtures** section wrapper and **Demo home** leaf label).
+
 == 0.3.0 — 2026-10-16
 
 === Changed (breaking)

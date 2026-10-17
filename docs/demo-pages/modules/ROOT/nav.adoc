@@ -1,5 +1,4 @@
-.Body fixtures
-* xref:index.adoc[Demo home]
+* xref:index.adoc[Overview]
 * xref:typography.adoc[Typography]
 * xref:code-blocks.adoc[Code Blocks]
 * xref:admonitions.adoc[Admonitions]

@@ -1,5 +1,5 @@
 = Antora body fixtures
-:navtitle: Demo home
+:navtitle: Overview
 :description: Host-agnostic AsciiDoc pages that exercise default Antora rendering and theme chrome (Valentus, Default UI, etc.).
 :page-tags: demo, fixtures, asciidoc
 :page-audience: Authors and theme maintainers validating AsciiDoc fixtures
