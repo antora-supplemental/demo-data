@@ -1,7 +1,7 @@
 = site-nav-tree fixture (`docs/fixtures/site-nav-tree`)
 :description: Optional multi-component content supplement for site-nav-tree demos.
 
-This directory is a **demo-data supplement** — not part of the baseline `theme-demo` component.
+This directory is a **demo-data supplement** — not part of the baseline `demo-pages` component.
 
 == Components
 
@@ -27,7 +27,7 @@ content:
   sources:
     - url: https://github.com/antora-supplemental/demo-data.git
       branches: main
-      start_path: docs/theme-demo
+      start_path: docs/demo-pages
     - url: https://github.com/antora-supplemental/demo-data.git
       branches: main
       start_path: docs/fixtures/site-nav-tree

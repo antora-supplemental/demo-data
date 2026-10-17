@@ -2,6 +2,6 @@
 :navtitle: Overview
 :description: First component in the site-nav-tree multi-root forest fixture.
 
-Use this stub with `@antora-supplemental/site-nav-tree` to prove a curated sidebar forest (multiple component roots) without bloating the baseline `theme-demo` component.
+Use this stub with `@antora-supplemental/site-nav-tree` to prove a curated sidebar forest (multiple component roots) without bloating the baseline `demo-pages` component.
 
 xref:topic-a.adoc[Topic A] and xref:topic-b.adoc[Topic B] provide depth for expand/collapse and filter smoke tests.

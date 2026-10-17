@@ -2,7 +2,7 @@
 
 Each subdirectory holds one **shared** fixture set promoted from extension repos when two or more demos need the same Antora content.
 
-Playbooks add a separate `content.sources` entry per supplement `start_path`. Baseline body pages stay in the `theme-demo` component at link:../../README.adoc[docs/theme-demo] (see repo README).
+Playbooks add a separate `content.sources` entry per supplement `start_path`. Baseline body pages stay in the `demo-pages` component at link:../../README.adoc[docs/demo-pages] (see repo README).
 
 | `start_path` | Extension | Notes |
 | === | === | === |

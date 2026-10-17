@@ -1,23 +1,29 @@
 = Changelog
 
-== 2026-10-16 — theme-demo page-context on hub index
+== 0.3.0 — 2026-10-16
 
-* `theme-demo` index: audience, usage context, authors, keywords for `@antora-supplemental/page-context` when composed into Facto stack Pages.
+=== Changed (breaking)
+
+* Renamed baseline component **`theme-demo`** → **`demo-pages`**; `start_path` **`docs/demo-pages/`**; human title **Demo pages**.
+* link:docs/demo-pages/modules/ROOT/pages/migration.adoc[Migration checklist] — URL mapping and `theme-demo` → `demo-pages` redirect notes for composed Pages sites.
+
+== 2026-10-16 — demo-pages page-context on hub index
+
+* `demo-pages` index: audience, usage context, authors, keywords for `@antora-supplemental/page-context` when composed into Facto stack Pages.
 :page-tags: changelog
 
 == Unreleased
 
 === Changed
 
-* README: facto-stack `siteNavTree` example uses `[home, theme-demo]` after stack pages merged into `home`.
+* README: facto-stack `siteNavTree` example uses `[home, demo-pages]` after stack pages merged into `home`.
 * README catalog links use unversioned docs hub URLs (`/docs/proposals/demo-data-catalog/`).
-* link:docs/theme-demo/modules/ROOT/pages/migration.adoc[Migration checklist] — valentus-theme cutover complete; URL mapping for GitHub Pages documented.
 
 == 0.2.0 — 2026-10-16
 
 === Added
 
-* Baseline `theme-demo` component: migrated ROOT fixture pages and diagram assets from `valentus-theme` (MIT).
+* Baseline `theme-demo` component (now `demo-pages`): migrated ROOT fixture pages and diagram assets from `valentus-theme` (MIT).
 * Prescribed demo-data pattern in link:README.adoc[README] (baseline vs supplements vs extension-local smoke).
 * `docs/fixtures/site-nav-tree` supplement (`catalog-alpha`, `catalog-beta`) for multi-root sidebar demos.
 
@@ -29,4 +35,4 @@
 
 === Added
 
-* Repository scaffold: `theme-demo` component shell, migration inventory page, LICENSE (MIT).
+* Repository scaffold: baseline component shell (`theme-demo`, renamed in v0.3.0), migration inventory page, LICENSE (MIT).

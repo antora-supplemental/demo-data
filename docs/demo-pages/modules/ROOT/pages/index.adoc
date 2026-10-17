@@ -8,7 +8,7 @@
 :page-orig-author: Ryan Johnson
 :page-last-author: Cursor agent on behalf of Ryan Johnson
 :page-last-edited: 2026-10-16
-:page-keywords: theme-demo, fixtures, asciidoc
+:page-keywords: demo-pages, fixtures, asciidoc
 
 These pages showcase common AsciiDoc constructs in a real multi-page component: navigation, xrefs, admonitions, tables, code, images, and extension-oriented samples.
 

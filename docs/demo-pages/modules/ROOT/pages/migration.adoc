@@ -6,6 +6,14 @@
 Do **not** copy the entire `valentus-theme` repository.
 Move only the *Theme Demo* slice (`docs/modules/ROOT/`) into this component and leave the *guide* module in `valentus-theme`.
 
+== Component rename (`theme-demo` → `demo-pages`)
+
+Baseline shared body fixtures use component name **`demo-pages`** (`docs/demo-pages/`).
+The earlier name `theme-demo` was too theme-specific; published URLs and playbook `start_path` values changed in **v0.3.0**.
+
+Consumers should pin `demo-data` @ `v0.3.0` (or newer), set `start_path: docs/demo-pages`, and allowlist `demo-pages` in `siteNavTree`.
+Post-build redirect stubs on deployed demos map `/theme-demo/…` → `/demo-pages/…` for bookmarked Pages URLs.
+
 == Source inventory (valentus-theme)
 
 [cols="2,3", options="header"]
@@ -13,7 +21,7 @@ Move only the *Theme Demo* slice (`docs/modules/ROOT/`) into this component and 
 | Path | Notes
 
 | `docs/modules/ROOT/pages/index.adoc`
-| Demo hub; update xrefs to stay in `theme-demo` component
+| Demo hub; update xrefs to stay in `demo-pages` component
 
 | `typography.adoc`, `code-blocks.adoc`, `admonitions.adoc`, `tables.adoc`, `blocks.adoc`, `lists.adoc`, `images.adoc`
 | Core AsciiDoc chrome fixtures (~same coverage as link:https://github.com/antora-supplemental/antora-demo[`antora-demo`^] but Valentus-branded copy)
@@ -25,7 +33,7 @@ Move only the *Theme Demo* slice (`docs/modules/ROOT/`) into this component and 
 | Themed SVG artifacts (`.mmd`, `.svg`, `.host.svg`, `.theme.json`) — copy with pages; run themed-svg pipeline if paths change
 
 | `docs/mermaid-config.json`
-| Move to `docs/theme-demo/` root or consumer playbook dir
+| Move to `docs/demo-pages/` root or consumer playbook dir
 
 | `docs/modules/guide/**`
 | **Keep** in `valentus-theme` (product documentation)
@@ -44,10 +52,10 @@ Extension supplemental CSS should continue to *reference* those tokens with fall
 
 == valentus-theme playbook after migration
 
-. `antora-playbook.yml` — guide + optional xref to external `theme-demo` source if you want fixtures on Pages without merging repos
-. `antora-playbook-visual-demo.yml` — point `content.sources` at this repo's `docs/theme-demo` instead of sibling clone
+. `antora-playbook.yml` — guide + optional xref to external `demo-pages` source if you want fixtures on Pages without merging repos
+. `antora-playbook-visual-demo.yml` — point `content.sources` at this repo's `docs/demo-pages` instead of sibling clone
 +
-When pinning a git *tag*, set `branches: []` on that source entry so Antora does not also collect `main` (duplicate `theme-demo` nav).
+When pinning a git *tag*, set `branches: []` on that source entry so Antora does not also collect `main` (duplicate `demo-pages` nav).
 
 == Per-extension fixtures (stay local unless shared)
 
@@ -70,11 +78,11 @@ When pinning a git *tag*, set `branches: []` on that source entry so Antora does
 
 == Checklist
 
-* [x] Confirm component name `theme-demo` (vs `valentus-fixtures`)
+* [x] Confirm component name `demo-pages` (renamed from `theme-demo` in v0.3.0)
 * [x] Copy ROOT pages + images; fix component/version xrefs (index NOTE → external guide link)
 * [x] **Valentus copy approval / cleanup:** trim `valentus-theme` nav to guide-only; document URL change (no HTML redirects on Pages)
 * [x] Tag `demo-data` (`v0.2.0` baseline migration) and pin consumer playbooks
-* [ ] Rebuild valentus-theme + facto-stack Pages workflows (CI on next push to `main`)
+* [x] Rebuild valentus-theme + facto-stack Pages workflows (CI on next push to `main`)
 
 Completed with link:https://github.com/antora-supplemental/valentus-theme/commit/f28c657[`valentus-theme` @ `f28c657`^] on `main`.
 
@@ -82,15 +90,17 @@ Completed with link:https://github.com/antora-supplemental/valentus-theme/commit
 
 [cols="2,3", options="header"]
 |===
-| Before (in-repo ROOT) | After (`theme-demo` from demo-data)
+| Before (in-repo ROOT) | After (`demo-pages` from demo-data)
 
 | `…/valentus-theme/valentus-theme/1.0/` (fixture hub)
-| link:https://antora-supplemental.github.io/valentus-theme/theme-demo/~/[`…/valentus-theme/theme-demo/~/`^]
+| link:https://antora-supplemental.github.io/valentus-theme/demo-pages/~/[`…/valentus-theme/demo-pages/~/`^]
 
 | `…/valentus-theme/valentus-theme/1.0/typography.html` (and sibling fixture pages)
-| `…/valentus-theme/theme-demo/~/typography/` (same page names under component `theme-demo`, version `~`)
+| `…/valentus-theme/demo-pages/~/typography/` (same page names under component `demo-pages`, version `~`)
 
 | Guide (unchanged) | `…/valentus-theme/valentus-theme/1.0/guide/…`
 |===
 
-Facto stack demo canonical fixture tree: link:https://antora-supplemental.github.io/facto-stack/theme-demo/~/[`facto-stack/theme-demo/~/`^] (same `demo-data` source, different site URL).
+Intermediate URLs under `…/theme-demo/~/` (v0.2.x) redirect to `…/demo-pages/~/` on sites that run the legacy redirect script.
+
+Facto stack demo canonical fixture tree: link:https://antora-supplemental.github.io/facto-stack/demo-pages/~/[`facto-stack/demo-pages/~/`^] (same `demo-data` source, different site URL).
