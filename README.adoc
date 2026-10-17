@@ -74,7 +74,9 @@ content:
   sources:
     - url: https://github.com/antora-supplemental/demo-data.git
       branches: main
-      # Pin for reproducible CI: tags: v0.2.0
+      # Pin for reproducible CI (tag-only — set branches: [] to avoid duplicate nav):
+      # tags: [v0.2.0]
+      # branches: []
       start_path: docs/theme-demo
 ----
 

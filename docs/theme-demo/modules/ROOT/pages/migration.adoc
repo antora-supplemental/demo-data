@@ -46,6 +46,8 @@ Extension supplemental CSS should continue to *reference* those tokens with fall
 
 . `antora-playbook.yml` — guide + optional xref to external `theme-demo` source if you want fixtures on Pages without merging repos
 . `antora-playbook-visual-demo.yml` — point `content.sources` at this repo's `docs/theme-demo` instead of sibling clone
++
+When pinning a git *tag*, set `branches: []` on that source entry so Antora does not also collect `main` (duplicate `theme-demo` nav).
 
 == Per-extension fixtures (stay local unless shared)
 
@@ -74,7 +76,7 @@ Extension supplemental CSS should continue to *reference* those tokens with fall
 * [x] Tag `demo-data` (`v0.2.0` baseline migration) and pin consumer playbooks
 * [ ] Rebuild valentus-theme + facto-stack Pages workflows (CI on next push to `main`)
 
-Completed with `valentus-theme` commit (see repo history on `main` after cutover push).
+Completed with link:https://github.com/antora-supplemental/valentus-theme/commit/f28c657[`valentus-theme` @ `f28c657`^] on `main`.
 
 == Published URL mapping (Valentus GitHub Pages)
 
