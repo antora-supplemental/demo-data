@@ -1,4 +1,8 @@
 = Changelog
+
+== 2026-10-16 — theme-demo page-context on hub index
+
+* `theme-demo` index: audience, usage context, authors, keywords for `@antora-supplemental/page-context` when composed into Facto stack Pages.
 :page-tags: changelog
 
 == Unreleased
