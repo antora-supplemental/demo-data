@@ -1,0 +1,119 @@
+= Extensions Overview
+:navtitle: Overview
+:page-aliases: extensions.adoc
+:description: How Asciidoctor extensions and third-party integrations compose with demo playbooks and theme chrome.
+:icons: font
+:experimental:
+
+This section explores various Asciidoctor extensions and third-party integrations.
+Some work seamlessly with the dark theme, others may need additional styling.
+Toggle between light and dark modes to see how each renders.
+
+Use the *Search* box in the top bar on composed demos (powered by `@antora/lunr-extension`).
+Try queries such as `installation`, `dark`, or `title:configuration`.
+
+== Fixture pages
+
+[cols="1,2"]
+|===
+| Page | Topic
+
+| xref:extensions/lunr-search.adoc[Lunr search]
+| `@antora/lunr-extension` and playbook wiring
+
+| xref:extensions/tabs.adoc[Tabs]
+| `@asciidoctor/tabs` tabbed blocks
+
+| xref:extensions/stem-math.adoc[STEM / Math]
+| LaTeX math via MathJax or KaTeX
+
+| xref:extensions/kroki-diagrams.adoc[Kroki diagrams]
+| Themed SVG + Kroki pipeline
+
+| xref:extensions/mermaid-sequences.adoc[Mermaid sequences]
+| Sequence diagrams in the same artifact pipeline
+
+| xref:extensions/embedded-content.adoc[Embedded content]
+| Video embeds and HTML passthrough
+
+| xref:extensions/interactive-elements.adoc[Interactive elements]
+| Keyboard, menu, and button UI macros
+
+| xref:extensions/font-icons.adoc[Font icons]
+| Font Awesome via `:icons: font`
+
+| xref:extensions/custom-roles.adoc[Custom roles]
+| Lead, small, big, and custom CSS roles
+|===
+
+Extension supplements promoted to link:https://github.com/antora-supplemental/demo-data/blob/main/docs/fixtures/README.adoc[`docs/fixtures/`^] appear under *Extensions* when a playbook composes them and sets the matching AsciiDoc attribute (see link:https://github.com/antora-supplemental/demo-data/blob/main/docs/fixtures/site-nav-tree/README.adoc[site-nav-tree fixture README^]).
+
+== What Needs Extra Work?
+
+Some extensions require additional dark mode CSS:
+
+[cols="2,1,3"]
+|===
+| Extension | Status | Notes
+
+| Tabs (`@asciidoctor/tabs`)
+| icon:check[role=green] Works
+| Inherits theme colors
+
+| Search (`@antora/lunr-extension`)
+| icon:check[role=green] Works
+| Input + dropdown styled in `site-extra.css`; enable via playbook `antora.extensions`
+
+| STEM / Math
+| icon:check[role=green] Works
+| SVG/HTML inherits text color
+
+| Kroki / Diagrams
+| icon:warning[role=yellow] Partial
+| Diagram colors are hardcoded in source
+
+| Video embeds
+| icon:check[role=green] Works
+| Player has own chrome
+
+| HTML Passthrough
+| icon:times[role=red] Manual
+| Inline styles override theme
+
+| Keyboard macros
+| icon:check[role=green] Works
+| Styled by theme
+
+| Menu/Button macros
+| icon:check[role=green] Works
+| Styled by theme
+
+| Font icons
+| icon:check[role=green] Works
+| Inherits text color
+
+| Custom roles
+| icon:warning[role=yellow] Partial
+| Standard roles styled; custom need CSS
+|===
+
+== Extending for Your Content
+
+To style custom elements in dark mode, add selectors to your CSS:
+
+[source,css]
+----
+/* Your custom component */
+html.dark-theme .my-custom-widget {
+  background-color: #25262b;
+  color: #c1c2c5;
+  border-color: #373a40;
+}
+
+/* Dark-mode-aware diagram wrapper */
+html.dark-theme .diagram-wrapper svg {
+  filter: invert(0.85) hue-rotate(180deg);
+}
+----
+
+TIP: The `filter: invert() hue-rotate()` trick can make light-themed diagrams readable in dark mode, though colors will shift.

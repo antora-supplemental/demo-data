@@ -1,0 +1,7 @@
+// Included from nav.adoc when playbooks compose extension supplements.
+// Set asciidoc attribute `demo-fixtures-site-nav-tree` (any value) on the playbook.
+ifdef::demo-fixtures-site-nav-tree[]
+** Site nav tree fixtures (`@antora-supplemental/site-nav-tree`)
+*** xref:catalog-alpha:ROOT:index.adoc[Catalog Alpha]
+*** xref:catalog-beta:ROOT:index.adoc[Catalog Beta]
+endif::[]

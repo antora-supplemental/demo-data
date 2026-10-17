@@ -1,0 +1,37 @@
+= Embedded Content
+:navtitle: Embedded content
+:description: Video embeds and raw HTML passthrough blocks.
+:icons: font
+
+Iframes and embedded widgets maintain their own styling—they don't inherit from the parent page's CSS.
+
+[.float-group]
+--
+[.left]
+****
+.Video Embeds
+YouTube, Vimeo, and other video embeds work fine—the player chrome adapts to the video, not your site theme.
+****
+
+video::dQw4w9WgXcQ[youtube,width=480,height=270]
+--
+
+[.float-group]
+--
+[.right.text-right]
+****
+.Raw HTML Passthrough
+Passthrough blocks let you inject arbitrary HTML.
+Inline styles override the theme, so plan accordingly.
+****
+
+++++
+<div style="padding: 1.5em; border-radius: 8px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+  <strong>Custom HTML Block</strong><br>
+  <small>This has hardcoded colors—it looks the same in both themes.</small>
+</div>
+++++
+
+--
+
+See also xref:extensions/overview.adoc[Extensions Overview].

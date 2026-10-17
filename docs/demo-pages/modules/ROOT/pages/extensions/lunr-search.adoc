@@ -1,0 +1,19 @@
+= Lunr Search
+:navtitle: Lunr search
+:description: `@antora/lunr-extension` on composed demo sites.
+:icons: font
+
+[.float-group]
+--
+[.left]
+****
+.Lunr search (`@antora/lunr-extension`)
+The official Antora search extension indexes pages at build time and serves results in the browser—no external search service required.
+This demo playbook registers it under `antora.extensions`; the supplemental header exposes `#search-input` when `SITE_SEARCH_PROVIDER` is set.
+****
++
+The search dropdown, highlights, and input field inherit dark-mode colors from `site-extra.css`.
+Results can jump to section headings when `index_by_heading: true` is enabled in the playbook.
+--
+
+See also xref:extensions/overview.adoc[Extensions Overview].

@@ -1,0 +1,42 @@
+= Tabs Extension
+:navtitle: Tabs
+:description: Tabbed content blocks via `@asciidoctor/tabs`.
+:icons: font
+
+[.float-group]
+--
+[.left]
+****
+.Tabs Extension
+The `@asciidoctor/tabs` extension creates tabbed content blocks—perfect for showing alternatives like package managers or platform-specific instructions.
+****
+
+[tabs]
+====
+JavaScript::
++
+[source,javascript]
+----
+const greeting = "Hello, dark mode!";
+console.log(greeting);
+----
+
+Python::
++
+[source,python]
+----
+greeting = "Hello, dark mode!"
+print(greeting)
+----
+
+Ruby::
++
+[source,ruby]
+----
+greeting = "Hello, dark mode!"
+puts greeting
+----
+====
+--
+
+See also xref:extensions/overview.adoc[Extensions Overview].

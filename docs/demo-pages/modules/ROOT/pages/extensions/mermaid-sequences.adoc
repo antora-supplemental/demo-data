@@ -1,0 +1,25 @@
+= Mermaid Sequence Diagrams
+:navtitle: Mermaid sequences
+:description: Sequence diagrams in the themed SVG artifact pipeline.
+:icons: font
+
+[.float-group]
+--
+[.right.text-right]
+****
+.Mermaid Sequence
+Mermaid keeps the sequence example in the same canonical source and artifact pipeline as the flowchart.
+****
+
+[.themed-svg]
+image::diagrams/authentication-sequence.svg[Authentication sequence]
+
+[source,mermaid]
+----
+include::../../images/diagrams/authentication-sequence.mmd[]
+----
+
+TIP: Keep authored diagram examples in Mermaid and regenerate both SVG delivery modes after source or palette changes.
+--
+
+See also xref:extensions/kroki-diagrams.adoc[Kroki diagrams] and xref:extensions/overview.adoc[Extensions Overview].

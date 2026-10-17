@@ -1,0 +1,31 @@
+= Custom Roles & Styling
+:navtitle: Custom roles
+:description: Built-in text roles and custom CSS classes in dark mode.
+:icons: font
+
+[.float-group]
+--
+[.right.text-right]
+****
+.Text Roles
+Custom roles apply CSS classes.
+The dark theme styles common roles, but custom ones need your own CSS.
+****
+
+[.lead]
+Lead paragraphs introduce sections with emphasis.
+
+[.small]
+Small text for footnotes or asides.
+
+[.big]
+Big text for impact.
+
+[.underline]
+Underlined for emphasis.
+
+[.line-through]
+Struck through for deletions.
+--
+
+See also xref:extensions/overview.adoc[Extensions Overview].

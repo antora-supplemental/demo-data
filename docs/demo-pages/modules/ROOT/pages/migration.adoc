@@ -26,7 +26,7 @@ Post-build redirect stubs on deployed demos map `/theme-demo/…` → `/demo-pag
 | `typography.adoc`, `code-blocks.adoc`, `admonitions.adoc`, `tables.adoc`, `blocks.adoc`, `lists.adoc`, `images.adoc`
 | Core AsciiDoc chrome fixtures (~same coverage as link:https://github.com/antora-supplemental/antora-demo[`antora-demo`^] but Valentus-branded copy)
 
-| `extensions.adoc`
+| `extensions/` (overview + topic pages; alias `extensions.adoc` on overview)
 | Tabs, STEM, Kroki/Mermaid samples — coordinate with consumer playbook (Facto vs lean Valentus)
 
 | `docs/modules/ROOT/images/diagrams/*`

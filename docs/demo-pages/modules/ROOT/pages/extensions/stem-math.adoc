@@ -1,0 +1,31 @@
+= STEM / Mathematical Notation
+:navtitle: STEM / Math
+:description: LaTeX math rendering with STEM-enabled playbooks.
+:icons: font
+
+[.float-group]
+--
+[.right.text-right]
+****
+.STEM / Mathematical Notation
+AsciiDoc supports mathematical notation via MathJax or KaTeX.
+The formulas render as SVG or HTML, typically inheriting text color.
+****
+
+When latexmath is enabled, you can write inline math like latexmath:[\sqrt{x^2 + y^2}] or display equations:
+
+[latexmath]
+++++
+E = mc^2
+++++
+
+[latexmath]
+++++
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+++++
+
+NOTE: Math rendering depends on your playbook's STEM configuration.
+If formulas don't appear, ensure `asciidoc.attributes.stem` is set.
+--
+
+See also xref:extensions/overview.adoc[Extensions Overview].

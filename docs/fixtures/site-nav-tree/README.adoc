@@ -18,25 +18,48 @@ This directory is a **demo-data supplement** — not part of the baseline `demo-
 
 == Playbook wiring
 
-Add a second (or third) content source pointing at this folder.
-Enable `@antora-supplemental/site-nav-tree` with an explicit `include` list.
+Add a second content source pointing at this folder.
+Enable `@antora-supplemental/site-nav-tree` with an explicit `include` list that keeps **`demo-pages`** (and your hub component) as forest roots — do **not** add `catalog-alpha` / `catalog-beta` to `include` when you want them nested under baseline nav.
+
+Set AsciiDoc attribute `demo-fixtures-site-nav-tree` so `demo-pages` nav includes xrefs to these components under *Extensions*.
 
 [source,yaml]
 ----
 content:
   sources:
     - url: https://github.com/antora-supplemental/demo-data.git
-      branches: main
+      tags: [v0.3.2]
+      branches: []
       start_path: docs/demo-pages
     - url: https://github.com/antora-supplemental/demo-data.git
-      branches: main
+      tags: [v0.3.2]
+      branches: []
       start_path: docs/fixtures/site-nav-tree
+
+asciidoc:
+  attributes:
+    demo-fixtures-site-nav-tree: ''
 
 antora:
   extensions:
     - require: '@antora-supplemental/site-nav-tree'
-      include: [catalog-alpha, catalog-beta]
-      order: [catalog-alpha, catalog-beta]
+      include: [home, demo-pages]
+      order: [home, demo-pages]
 ----
 
-The `facto-stack` demo keeps forest smoke optional; see link:https://github.com/antora-supplemental/facto-stack[`facto-stack`^] `demo/playbook.yml` comments.
+The `facto-stack` demo enables this forest smoke by default; see link:https://github.com/antora-supplemental/facto-stack[`facto-stack`^] `demo/playbook.yml`.
+
+== Nav shape (baseline `demo-pages`)
+
+Under forest root **antora-core**, body fixtures stay flat; extension topics and supplements nest under `.Extensions`:
+
+[source]
+----
+* Overview … Images & Media, Migration notes
+.Extensions
+** Extensions Overview
+** Lunr search … Custom roles
+** Site nav tree fixtures (when attribute set)
+*** Catalog Alpha …
+*** Catalog Beta …
+----

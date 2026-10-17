@@ -1,0 +1,28 @@
+= Kroki Diagrams
+:navtitle: Kroki diagrams
+:description: Kroki and themed SVG delivery for flowcharts.
+:icons: font
+
+[.float-group]
+--
+[.left]
+****
+.Kroki Diagrams
+Kroki renders diagrams from text—Mermaid, PlantUML, D2, and dozens more.
+These generate SVGs that may need dark-mode-aware colors.
+****
+
+Here's a portable themed artifact and its canonical Mermaid source:
+
+[.themed-svg]
+image::diagrams/decision-flow.svg[Decision flow]
+
+[source,mermaid]
+----
+include::../../images/diagrams/decision-flow.mmd[]
+----
+
+The standalone SVG includes light and dark presets. Sites with the Themed SVG runtime progressively inject the host artifact so a manual site theme can control the palette.
+--
+
+See also xref:extensions/mermaid-sequences.adoc[Mermaid sequences] and xref:extensions/overview.adoc[Extensions Overview].

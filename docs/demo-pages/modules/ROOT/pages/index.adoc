@@ -41,8 +41,8 @@ TIP: On Valentus-backed demos, use the *theme toggle* in the navbar to compare l
 | xref:images.adoc[Images & Media]
 | Image blocks and figure captions
 
-| xref:extensions.adoc[Extensions]
-| Tabs, diagrams, math, embeds, and third-party integrations
+| xref:extensions/overview.adoc[Extensions]
+| Tabs, diagrams, math, embeds, and third-party integrations (nested under *Extensions* in nav)
 |===
 
 == Quick code example

@@ -1,0 +1,37 @@
+= Interactive Elements
+:navtitle: Interactive elements
+:description: Keyboard shortcuts and menu/button UI macros.
+:icons: font
+
+[.float-group]
+--
+[.left]
+****
+.Keyboard Shortcuts
+The `kbd` macro renders keyboard shortcuts.
+These typically style well in dark mode.
+****
+
+Press kbd:[Ctrl+Shift+P] to open the command palette.
+
+Use kbd:[Cmd+K] then kbd:[Cmd+S] to save all files.
+
+Common shortcuts: kbd:[Esc], kbd:[Enter], kbd:[Tab], kbd:[Space]
+--
+
+[.float-group]
+--
+[.right.text-right]
+****
+.Menu & Button UI Macros
+Menu selections and button references help document GUIs.
+****
+
+Select menu:File[Save As... > PDF] to export.
+
+Click btn:[OK] to confirm or btn:[Cancel] to abort.
+
+Navigate to menu:Settings[Appearance > Theme > Dark].
+--
+
+See also xref:extensions/overview.adoc[Extensions Overview].

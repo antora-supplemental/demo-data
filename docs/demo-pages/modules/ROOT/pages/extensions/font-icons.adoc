@@ -1,0 +1,26 @@
+= Font Icons
+:navtitle: Font icons
+:description: Font Awesome icons via the `:icons: font` attribute.
+:icons: font
+
+[.float-group]
+--
+[.left]
+****
+.Font Awesome Icons
+When `:icons: font` is set, AsciiDoc renders icons via Font Awesome.
+These inherit text color automatically.
+****
+
+icon:heart[role=red] Love this theme
+
+icon:code[] Write some code
+
+icon:sun-o[] Light mode / icon:moon-o[] Dark mode
+
+icon:github[] Check out the repo
+
+icon:warning[] Warnings stand out
+--
+
+See also xref:extensions/overview.adoc[Extensions Overview].
