@@ -1,0 +1,22 @@
+= Theme demo (scaffold)
+:navtitle: Demo home
+:description: Placeholder component for shared Valentus visual fixtures — content migrates from valentus-theme ROOT.
+:page-tags: demo, valentus, fixtures
+
+This component is the future home of the *Theme Demo* pages that today live under link:https://github.com/antora-supplemental/valentus-theme[`valentus-theme`^] (`docs/modules/ROOT/`).
+
+Until migration completes, the published Valentus site still serves the full fixture set under the `valentus-theme` component.
+
+== What belongs here
+
+Pages that exist only to show AsciiDoc + Valentus chrome (typography, admonitions, code blocks, tables, tabs, themed diagrams).
+They are not installation or customization guide material.
+
+== Consumer demos
+
+* link:https://antora-supplemental.github.io/facto-stack/[facto-stack demo^] — wires this source alongside stack-specific pages (Mermaid client, lightbox, SoftNav).
+* link:https://antora-supplemental.github.io/valentus-theme/[valentus-theme Pages^] — product site until ROOT moves here.
+
+== Next step
+
+Follow xref:migration.adoc[Migration from valentus-theme] for file-level copy rules and asset boundaries.

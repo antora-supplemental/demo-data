@@ -1,0 +1,6 @@
+name: theme-demo
+title: Theme demo
+version: ~
+start_page: ROOT:index.adoc
+nav:
+  - modules/ROOT/nav.adoc

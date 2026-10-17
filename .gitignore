@@ -1,0 +1,16 @@
+# Build output
+build/
+public/
+.cache/
+
+# Dependencies
+node_modules/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

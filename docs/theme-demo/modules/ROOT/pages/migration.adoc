@@ -1,0 +1,75 @@
+= Migration from valentus-theme
+:navtitle: Migration
+:description: Inventory and steps to move Theme Demo content out of valentus-theme without duplicating guide docs.
+:page-tags: migration, demo-data
+
+Do **not** copy the entire `valentus-theme` repository.
+Move only the *Theme Demo* slice (`docs/modules/ROOT/`) into this component and leave the *guide* module in `valentus-theme`.
+
+== Source inventory (valentus-theme)
+
+[cols="2,3", options="header"]
+|===
+| Path | Notes
+
+| `docs/modules/ROOT/pages/index.adoc`
+| Demo hub; update xrefs to stay in `theme-demo` component
+
+| `typography.adoc`, `code-blocks.adoc`, `admonitions.adoc`, `tables.adoc`, `blocks.adoc`, `lists.adoc`, `images.adoc`
+| Core AsciiDoc chrome fixtures (~same coverage as link:https://github.com/antora-supplemental/antora-demo[`antora-demo`^] but Valentus-branded copy)
+
+| `extensions.adoc`
+| Tabs, STEM, Kroki/Mermaid samples — coordinate with consumer playbook (Facto vs lean Valentus)
+
+| `docs/modules/ROOT/images/diagrams/*`
+| Themed SVG artifacts (`.mmd`, `.svg`, `.host.svg`, `.theme.json`) — copy with pages; run themed-svg pipeline if paths change
+
+| `docs/mermaid-config.json`
+| Move to `docs/theme-demo/` root or consumer playbook dir
+
+| `docs/modules/guide/**`
+| **Keep** in `valentus-theme` (product documentation)
+
+| `docs/antora.yml` (component `valentus-theme`)
+| After migration: drop `modules/ROOT/nav.adoc` from nav; guide-only nav
+|===
+
+== CSS / design language (do not duplicate)
+
+Foundational tokens live in the Valentus UI bundle (`site-visual.css`, `--adt-*`).
+Extension supplemental CSS should continue to *reference* those tokens with fallbacks — not fork palettes into demo-data.
+
+* Chassis vs paint: link:https://github.com/antora-supplemental/valentus-theme/blob/main/CHASSIS.md[`valentus-theme/CHASSIS.md`^]
+* Fixture-only classes (e.g. `.adt-logo-fixture-*`) stay in bundle CSS; demo pages keep using them
+
+== valentus-theme playbook after migration
+
+. `antora-playbook.yml` — guide + optional xref to external `theme-demo` source if you want fixtures on Pages without merging repos
+. `antora-playbook-visual-demo.yml` — point `content.sources` at this repo's `docs/theme-demo` instead of sibling clone
+
+== Per-extension fixtures (stay local unless shared)
+
+[cols="2,3", options="header"]
+|===
+| Location | Role
+
+| `facto-stack/demo/docs`
+| Stack-only demos (client Mermaid, lightbox, SoftNav)
+
+| `facto-stack/examples/docs`
+| Kroki bake / themed-svg smoke
+
+| `*/examples/docs` in extension repos
+| Minimal smoke for CI; link here when pages are reused across demos
+
+| `antora-demo` (`samples` component)
+| Generic AsciiDoc syntax reference for the org docs hub
+|===
+
+== Checklist (human approval before bulk copy)
+
+* [ ] Confirm component name `theme-demo` (vs `valentus-fixtures`)
+* [ ] Copy ROOT pages + images; fix component/version xrefs
+* [ ] Trim `valentus-theme` nav to guide-only; redirect or note on old fixture URLs
+* [ ] Tag `demo-data` and pin consumer playbooks
+* [ ] Rebuild valentus-theme + facto-stack Pages workflows

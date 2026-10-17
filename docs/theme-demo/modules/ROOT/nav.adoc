@@ -1,0 +1,3 @@
+.Theme demo
+* xref:index.adoc[Demo home]
+* xref:migration.adoc[Migration from valentus-theme]

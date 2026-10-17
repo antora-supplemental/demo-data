@@ -1,0 +1,60 @@
+= demo-data
+:description: Shared Antora content components for Valentus and extension demo sites — not production hub docs.
+
+ifndef::env-github[]
+image:https://img.shields.io/github/license/antora-supplemental/demo-data.svg?style=for-the-badge[License]
+endif::[]
+
+Shared **Antora content sources** for demo and docs-preview sites in the `antora-supplemental` org.
+Production org hubs keep their own product documentation; this repository holds reusable mock pages that exercise theme chrome and extensions.
+
+== Why a separate repo
+
+* *Valentus* (`valentus-theme`) stays a lean UI product — theme guide docs remain there; visual fixture pages move here over time.
+* *Extensions* ship code + optional small `examples/docs` smoke fixtures; heavy shared AsciiDoc lives here.
+* *Playbooks* compose sources with `content.sources` (same pattern as the org hub wiring link:https://github.com/antora-supplemental/antora-demo[`antora-demo`^]).
+
+Architecture and wiring: link:https://docs.antora-supplemental.org/docs/ROOT/proposals/demo-data-catalog.html[Demo data catalog proposal^].
+
+== Components (under `docs/`)
+
+[cols="2,3", options="header"]
+|===
+| `start_path` | Purpose
+
+| `docs/theme-demo`
+| Valentus `--adt-*` body fixtures (typography, admonitions, tables, tabs, diagrams). Migrating from `valentus-theme/docs/modules/ROOT`.
+|===
+
+Future optional overlays (same repo, separate `start_path` per component):
+
+* `docs/fixtures/site-nav-tree` — multi-component forest smoke
+* Per-extension folders only when fixtures are too large for the extension repo
+
+Generic AsciiDoc syntax samples remain in link:https://github.com/antora-supplemental/antora-demo[`antora-demo`^] (component `samples`).
+
+== Playbook wiring
+
+[source,yaml]
+----
+content:
+  sources:
+    - url: https://github.com/antora-supplemental/demo-data.git
+      branches: main
+      start_path: docs/theme-demo
+    # Stack-specific pages stay in the consumer repo (e.g. facto-stack/demo/docs)
+    - url: ./demo/docs
+      branches: HEAD
+      start_path: demo/docs
+----
+
+Multi-component sidebars: enable `@antora-supplemental/site-nav-tree` with an `include` allowlist (see `facto-stack` demo playbook).
+
+== Versioning
+
+Tag this repo (`v0.1.0`, …) when nav or component names change.
+Demo playbooks may pin a tag; org hubs may track `main` for preview.
+
+== Migration status
+
+See link:docs/theme-demo/modules/ROOT/pages/migration.adoc[migration.adoc] for the valentus-theme ROOT module inventory (no bulk copy in the initial scaffold).
