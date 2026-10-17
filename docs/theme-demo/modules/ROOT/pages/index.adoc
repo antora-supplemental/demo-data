@@ -1,22 +1,56 @@
-= Theme demo (scaffold)
+= Antora body fixtures
 :navtitle: Demo home
-:description: Placeholder component for shared Valentus visual fixtures — content migrates from valentus-theme ROOT.
-:page-tags: demo, valentus, fixtures
+:description: Host-agnostic AsciiDoc pages that exercise default Antora rendering and theme chrome (Valentus, Default UI, etc.).
+:page-tags: demo, fixtures, asciidoc
 
-This component is the future home of the *Theme Demo* pages that today live under link:https://github.com/antora-supplemental/valentus-theme[`valentus-theme`^] (`docs/modules/ROOT/`).
+These pages showcase common AsciiDoc constructs in a real multi-page component: navigation, xrefs, admonitions, tables, code, images, and extension-oriented samples.
 
-Until migration completes, the published Valentus site still serves the full fixture set under the `valentus-theme` component.
+TIP: On Valentus-backed demos, use the *theme toggle* in the navbar to compare light and dark modes.
 
-== What belongs here
+== Fixture pages
 
-Pages that exist only to show AsciiDoc + Valentus chrome (typography, admonitions, code blocks, tables, tabs, themed diagrams).
-They are not installation or customization guide material.
+[cols="1,2"]
+|===
+| Page | Description
 
-== Consumer demos
+| xref:typography.adoc[Typography]
+| Headings, paragraphs, inline formatting, and links
 
-* link:https://antora-supplemental.github.io/facto-stack/[facto-stack demo^] — wires this source alongside stack-specific pages (Mermaid client, lightbox, SoftNav).
-* link:https://antora-supplemental.github.io/valentus-theme/[valentus-theme Pages^] — product site until ROOT moves here.
+| xref:code-blocks.adoc[Code Blocks]
+| Syntax-highlighted source code examples
 
-== Next step
+| xref:admonitions.adoc[Admonitions]
+| Note, tip, warning, caution, and important blocks
 
-Follow xref:migration.adoc[Migration from valentus-theme] for file-level copy rules and asset boundaries.
+| xref:tables.adoc[Tables]
+| Various table layouts and styles
+
+| xref:blocks.adoc[Blocks & Quotes]
+| Sidebars, examples, quotes, and literal blocks
+
+| xref:lists.adoc[Lists]
+| Ordered, unordered, and description lists
+
+| xref:images.adoc[Images & Media]
+| Image blocks and figure captions
+
+| xref:extensions.adoc[Extensions]
+| Tabs, diagrams, math, embeds, and third-party integrations
+|===
+
+== Quick code example
+
+[source,javascript]
+----
+// Example callback — not theme-specific
+function onReady() {
+  document.documentElement.dataset.demoReady = 'true';
+}
+----
+
+NOTE: Installation and customization for Valentus live in link:https://docs.antora-supplemental.org/valentus-theme/guide/index.html[Getting Started (valentus-theme guide)^], not in this component.
+
+== Provenance
+
+Fixture copy and diagrams were migrated from link:https://github.com/antora-supplemental/valentus-theme[`valentus-theme`^] `docs/modules/ROOT/` (MIT, same org).
+See xref:migration.adoc[Migration notes] for boundaries and remaining theme-repo cleanup.

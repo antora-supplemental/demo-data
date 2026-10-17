@@ -1,0 +1,4 @@
+= Nested page
+:navtitle: Nested page
+
+Nested URL under *Catalog Beta* for breadcrumb + forest alignment checks.

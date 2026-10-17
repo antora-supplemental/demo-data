@@ -1,0 +1,4 @@
+= Topic A
+:navtitle: Topic A
+
+Leaf page under *Catalog Alpha* for nav-tree current-page highlighting.

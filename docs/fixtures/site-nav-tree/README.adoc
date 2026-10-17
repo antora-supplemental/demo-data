@@ -1,0 +1,42 @@
+= site-nav-tree fixture (`docs/fixtures/site-nav-tree`)
+:description: Optional multi-component content supplement for site-nav-tree demos.
+
+This directory is a **demo-data supplement** — not part of the baseline `theme-demo` component.
+
+== Components
+
+[cols="2,3", options="header"]
+|===
+| `name` | Role
+
+| `catalog-alpha`
+| Three-level nav (Overview + two topics)
+
+| `catalog-beta`
+| Shorter nav + nested page URL
+|===
+
+== Playbook wiring
+
+Add a second (or third) content source pointing at this folder.
+Enable `@antora-supplemental/site-nav-tree` with an explicit `include` list.
+
+[source,yaml]
+----
+content:
+  sources:
+    - url: https://github.com/antora-supplemental/demo-data.git
+      branches: main
+      start_path: docs/theme-demo
+    - url: https://github.com/antora-supplemental/demo-data.git
+      branches: main
+      start_path: docs/fixtures/site-nav-tree
+
+antora:
+  extensions:
+    - require: '@antora-supplemental/site-nav-tree'
+      include: [catalog-alpha, catalog-beta]
+      order: [catalog-alpha, catalog-beta]
+----
+
+The `facto-stack` demo keeps forest smoke optional; see link:https://github.com/antora-supplemental/facto-stack[`facto-stack`^] `demo/playbook.yml` comments.

@@ -1,0 +1,22 @@
+= Changelog
+:page-tags: changelog
+
+== Unreleased
+
+== 0.2.0 — 2026-10-16
+
+=== Added
+
+* Baseline `theme-demo` component: migrated ROOT fixture pages and diagram assets from `valentus-theme` (MIT).
+* Prescribed demo-data pattern in link:README.adoc[README] (baseline vs supplements vs extension-local smoke).
+* `docs/fixtures/site-nav-tree` supplement (`catalog-alpha`, `catalog-beta`) for multi-root sidebar demos.
+
+=== Changed
+
+* Replaced scaffold placeholder index with full fixture hub and nav.
+
+== 0.1.0 — 2026-10-16
+
+=== Added
+
+* Repository scaffold: `theme-demo` component shell, migration inventory page, LICENSE (MIT).

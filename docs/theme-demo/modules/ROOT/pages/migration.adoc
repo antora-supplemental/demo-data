@@ -66,10 +66,10 @@ Extension supplemental CSS should continue to *reference* those tokens with fall
 | Generic AsciiDoc syntax reference for the org docs hub
 |===
 
-== Checklist (human approval before bulk copy)
+== Checklist
 
-* [ ] Confirm component name `theme-demo` (vs `valentus-fixtures`)
-* [ ] Copy ROOT pages + images; fix component/version xrefs
-* [ ] Trim `valentus-theme` nav to guide-only; redirect or note on old fixture URLs
-* [ ] Tag `demo-data` and pin consumer playbooks
+* [x] Confirm component name `theme-demo` (vs `valentus-fixtures`)
+* [x] Copy ROOT pages + images; fix component/version xrefs (index NOTE → external guide link)
+* [ ] **Valentus copy approval / cleanup:** trim `valentus-theme` nav to guide-only; stub or redirect old fixture URLs on Pages; avoid duplicate canonical URLs
+* [ ] Tag `demo-data` (`v0.2.0` suggested after baseline migration) and pin consumer playbooks
 * [ ] Rebuild valentus-theme + facto-stack Pages workflows

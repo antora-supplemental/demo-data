@@ -1,0 +1,6 @@
+name: catalog-beta
+title: Catalog Beta
+version: ~
+start_page: ROOT:index.adoc
+nav:
+  - modules/ROOT/nav.adoc

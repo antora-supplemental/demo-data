@@ -1,0 +1,5 @@
+= Catalog Beta
+:navtitle: Overview
+:description: Second forest root — shorter nav, different title length for filter UI.
+
+Pair with `catalog-alpha` and an `include` allowlist in the consumer playbook.
