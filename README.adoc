@@ -86,7 +86,10 @@ Baseline + extension supplement (same repo, second source):
 ----
     - url: https://github.com/antora-supplemental/demo-data.git
       branches: main
-      start_path: docs/fixtures/site-nav-tree
+      start_path: docs/fixtures/site-nav-tree/catalog-alpha
+    - url: https://github.com/antora-supplemental/demo-data.git
+      branches: main
+      start_path: docs/fixtures/site-nav-tree/catalog-beta
 ----
 
 Stack-local pages stay in the consumer (not copied here):

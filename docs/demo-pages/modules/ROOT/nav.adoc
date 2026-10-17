@@ -6,8 +6,7 @@
 * xref:blocks.adoc[Blocks & Quotes]
 * xref:lists.adoc[Lists]
 * xref:images.adoc[Images & Media]
-* xref:migration.adoc[Migration notes]
-.Extensions
+* .Extensions
 ** xref:extensions/overview.adoc[Extensions Overview]
 ** xref:extensions/lunr-search.adoc[Lunr search]
 ** xref:extensions/tabs.adoc[Tabs]
@@ -19,3 +18,4 @@
 ** xref:extensions/font-icons.adoc[Font icons]
 ** xref:extensions/custom-roles.adoc[Custom roles]
 include::partial$extensions-supplements-nav.adoc[]
+* xref:migration.adoc[Migration notes]

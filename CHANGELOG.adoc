@@ -4,7 +4,7 @@
 
 === Changed
 
-* Baseline `demo-pages`: split monolithic `extensions.adoc` into `extensions/` topic pages; nav section **Extensions** (overview + children). `:page-aliases: extensions.adoc` on overview preserves `/extensions/` URLs.
+* Baseline `demo-pages`: split monolithic `extensions.adoc` into `extensions/` topic pages; nav section `* .Extensions` (overview + children; migration stays a sibling leaf). `:page-aliases: extensions.adoc` on overview preserves `/extensions/` URLs.
 * `docs/fixtures/site-nav-tree`: playbooks nest `catalog-alpha` / `catalog-beta` under **Extensions** via `demo-fixtures-site-nav-tree` + xrefs (keep them out of `site-nav-tree` `include`).
 
 == 0.3.1 — 2026-10-17

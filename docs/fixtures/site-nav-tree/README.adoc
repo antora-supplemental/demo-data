@@ -18,7 +18,7 @@ This directory is a **demo-data supplement** — not part of the baseline `demo-
 
 == Playbook wiring
 
-Add a second content source pointing at this folder.
+Add one `content.sources` entry per component (`catalog-alpha`, `catalog-beta`) — each subdirectory has its own `antora.yml`.
 Enable `@antora-supplemental/site-nav-tree` with an explicit `include` list that keeps **`demo-pages`** (and your hub component) as forest roots — do **not** add `catalog-alpha` / `catalog-beta` to `include` when you want them nested under baseline nav.
 
 Set AsciiDoc attribute `demo-fixtures-site-nav-tree` so `demo-pages` nav includes xrefs to these components under *Extensions*.
@@ -34,7 +34,11 @@ content:
     - url: https://github.com/antora-supplemental/demo-data.git
       tags: [v0.3.2]
       branches: []
-      start_path: docs/fixtures/site-nav-tree
+      start_path: docs/fixtures/site-nav-tree/catalog-alpha
+    - url: https://github.com/antora-supplemental/demo-data.git
+      tags: [v0.3.2]
+      branches: []
+      start_path: docs/fixtures/site-nav-tree/catalog-beta
 
 asciidoc:
   attributes:
