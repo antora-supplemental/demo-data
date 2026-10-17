@@ -1,5 +1,5 @@
 name: demo-pages
-title: antora-core
+title: Demo pages
 version: ~
 start_page: ROOT:index.adoc
 nav:

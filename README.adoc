@@ -17,7 +17,7 @@ Architecture: link:https://docs.antora-supplemental.org/docs/proposals/demo-data
 | Layer | Responsibility
 
 | **Baseline** (this repo)
-| Host-agnostic AsciiDoc fixtures — nav, xrefs, admonitions, tables, code, images, extension samples. Component **`demo-pages`** under `docs/demo-pages/` (canonical baseline pattern for other fixtures). In multi-root demos (`site-nav-tree`), the forest root label is **`antora-core`**; extension topic pages and composed supplements nest under **Extensions** in `nav.adoc` (not as parallel forest roots).
+| Host-agnostic AsciiDoc fixtures — nav, xrefs, admonitions, tables, code, images, extension samples. Component **`demo-pages`** under `docs/demo-pages/` (canonical baseline pattern for other fixtures). In multi-root demos (`site-nav-tree`), the forest root label is **Demo pages** (`antora.yml` `title`); sidebar groups **Core** and **Extensions** in `nav.adoc`; extension supplements nest under **Extensions** (not as parallel forest roots).
 
 | **Extension supplements**
 | Extra components or overlays when an extension needs shared smoke beyond its own `examples/docs`. Live here as `docs/fixtures/{scope}/` *or* stay in the extension until two demos reuse the same pages.
@@ -122,7 +122,7 @@ Monorepo / dev phase: replace git `url` with a relative path to a sibling clone 
 | `start_path` | Purpose
 
 | `docs/demo-pages`
-| Baseline body fixtures (migrated from `valentus-theme/docs/modules/ROOT`). Component name: `demo-pages`; forest root label: `antora-core`.
+| Baseline body fixtures (migrated from `valentus-theme/docs/modules/ROOT`). Component name: `demo-pages`; forest root label: **Demo pages**.
 
 | `docs/fixtures/site-nav-tree`
 | Multi-component forest for `@antora-supplemental/site-nav-tree` (`catalog-alpha`, `catalog-beta`). See link:docs/fixtures/site-nav-tree/README.adoc[fixture README].

@@ -1,5 +1,11 @@
 = Changelog
 
+== 0.3.3 — 2026-10-17
+
+=== Changed (nav labels)
+
+* Baseline `demo-pages`: forest root title **Demo pages** (reverts mistaken **antora-core** label from v0.3.1); sidebar sections **Core** (body fixtures + migration) and **Extensions** (overview, topic pages, optional supplements via `extensions-supplements-nav`).
+
 == 0.3.2 — 2026-10-17
 
 === Changed

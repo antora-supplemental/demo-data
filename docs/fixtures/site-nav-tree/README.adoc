@@ -28,15 +28,15 @@ Set AsciiDoc attribute `demo-fixtures-site-nav-tree` so `demo-pages` nav include
 content:
   sources:
     - url: https://github.com/antora-supplemental/demo-data.git
-      tags: [v0.3.2]
+      tags: [v0.3.3]
       branches: []
       start_path: docs/demo-pages
     - url: https://github.com/antora-supplemental/demo-data.git
-      tags: [v0.3.2]
+      tags: [v0.3.3]
       branches: []
       start_path: docs/fixtures/site-nav-tree/catalog-alpha
     - url: https://github.com/antora-supplemental/demo-data.git
-      tags: [v0.3.2]
+      tags: [v0.3.3]
       branches: []
       start_path: docs/fixtures/site-nav-tree/catalog-beta
 
@@ -55,11 +55,13 @@ The `facto-stack` demo enables this forest smoke by default; see link:https://gi
 
 == Nav shape (baseline `demo-pages`)
 
-Under forest root **antora-core**, body fixtures stay flat; extension topics and supplements nest under `.Extensions`:
+Under forest root **Demo pages**, **Core** and **Extensions** are sibling nav sections; supplements nest under **Extensions** when the attribute is set:
 
 [source]
 ----
-* Overview … Images & Media, Migration notes
+Demo pages (forest root — component.title)
+.Core
+** Overview … Migration notes
 .Extensions
 ** Extensions Overview
 ** Lunr search … Custom roles

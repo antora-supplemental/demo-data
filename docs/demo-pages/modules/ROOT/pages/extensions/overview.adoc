@@ -1,5 +1,5 @@
 = Extensions Overview
-:navtitle: Overview
+:navtitle: Extensions Overview
 :page-aliases: extensions.adoc
 :description: How Asciidoctor extensions and third-party integrations compose with demo playbooks and theme chrome.
 :icons: font

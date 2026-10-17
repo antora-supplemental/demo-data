@@ -12,6 +12,12 @@ Baseline shared body fixtures use component name **`demo-pages`** (`docs/demo-pa
 The earlier name `theme-demo` was too theme-specific; published URLs and playbook `start_path` values changed in **v0.3.0**.
 
 Consumers should pin `demo-data` @ `v0.3.0` (or newer), set `start_path: docs/demo-pages`, and allowlist `demo-pages` in `siteNavTree`.
+
+== Sidebar nav (v0.3.3+)
+
+Forest root label **Demo pages** comes from `antora.yml` `title` (component `name` stays `demo-pages`).
+Under that root, `nav.adoc` groups **Core** (body fixtures + migration) and **Extensions** (overview, topic pages, optional supplements via `extensions-supplements-nav`).
+Pin **v0.3.3** when you rely on this hierarchy; v0.3.1 briefly used the mistaken forest label **antora-core**.
 Post-build redirect stubs on deployed demos map `/theme-demo/…` → `/demo-pages/…` for bookmarked Pages URLs.
 
 == Source inventory (valentus-theme)
