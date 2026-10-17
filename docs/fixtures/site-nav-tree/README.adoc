@@ -28,15 +28,15 @@ Set AsciiDoc attribute `demo-fixtures-site-nav-tree` so `demo-pages` nav include
 content:
   sources:
     - url: https://github.com/antora-supplemental/demo-data.git
-      tags: [v0.3.4]
+      tags: [v0.3.5]
       branches: []
       start_path: docs/demo-pages
     - url: https://github.com/antora-supplemental/demo-data.git
-      tags: [v0.3.4]
+      tags: [v0.3.5]
       branches: []
       start_path: docs/fixtures/site-nav-tree/catalog-alpha
     - url: https://github.com/antora-supplemental/demo-data.git
-      tags: [v0.3.4]
+      tags: [v0.3.5]
       branches: []
       start_path: docs/fixtures/site-nav-tree/catalog-beta
 
@@ -60,9 +60,9 @@ Under forest root **Demo pages**, **Core** and **Extensions** are sibling nav se
 [source]
 ----
 Demo pages (forest root — component.title)
-.Core
+Core
 ** Overview … Migration notes
-.Extensions
+Extensions
 ** Extensions Overview
 ** Lunr search … Custom roles
 ** Site nav tree fixtures (when attribute set)

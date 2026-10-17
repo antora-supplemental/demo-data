@@ -17,7 +17,7 @@ Consumers should pin `demo-data` @ `v0.3.0` (or newer), set `start_path: docs/de
 
 Forest root label **Demo pages** comes from `antora.yml` `title` (component `name` stays `demo-pages`).
 Under that root, `nav.adoc` groups **Core** (body fixtures + migration) and **Extensions** (overview, topic pages, optional supplements via `extensions-supplements-nav`).
-Pin **v0.3.3** or newer (**v0.3.4** fixes `*.Core` / `*.Extensions` section labels); v0.3.1 briefly used the mistaken forest label **antora-core**.
+Pin **v0.3.5** or newer for this hierarchy (**v0.3.3** forest title **Demo pages**; avoid **v0.3.4**); v0.3.1 briefly used the mistaken forest label **antora-core**.
 Post-build redirect stubs on deployed demos map `/theme-demo/…` → `/demo-pages/…` for bookmarked Pages URLs.
 
 == Source inventory (valentus-theme)
