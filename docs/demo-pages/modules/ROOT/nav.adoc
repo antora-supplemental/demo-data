@@ -1,4 +1,4 @@
-* . Core
+*.Core
 ** xref:index.adoc[Overview]
 ** xref:typography.adoc[Typography]
 ** xref:code-blocks.adoc[Code Blocks]
@@ -8,7 +8,7 @@
 ** xref:lists.adoc[Lists]
 ** xref:images.adoc[Images & Media]
 ** xref:migration.adoc[Migration notes]
-* . Extensions
+*.Extensions
 ** xref:extensions/overview.adoc[Extensions Overview]
 ** xref:extensions/lunr-search.adoc[Lunr search]
 ** xref:extensions/tabs.adoc[Tabs]

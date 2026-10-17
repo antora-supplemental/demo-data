@@ -1,5 +1,11 @@
 = Changelog
 
+== 0.3.4 — 2026-10-17
+
+=== Fixed
+
+* `nav.adoc`: use `*.Core` / `*.Extensions` section syntax so sidebar labels render without a leading dot.
+
 == 0.3.3 — 2026-10-17
 
 === Changed (nav labels)
