@@ -7,6 +7,11 @@
 
 == Unreleased
 
+=== Changed
+
+* README catalog links use unversioned docs hub URLs (`/docs/proposals/demo-data-catalog/`).
+* link:docs/theme-demo/modules/ROOT/pages/migration.adoc[Migration checklist] — valentus-theme cutover complete; URL mapping for GitHub Pages documented.
+
 == 0.2.0 — 2026-10-16
 
 === Added

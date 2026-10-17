@@ -70,6 +70,25 @@ Extension supplemental CSS should continue to *reference* those tokens with fall
 
 * [x] Confirm component name `theme-demo` (vs `valentus-fixtures`)
 * [x] Copy ROOT pages + images; fix component/version xrefs (index NOTE → external guide link)
-* [ ] **Valentus copy approval / cleanup:** trim `valentus-theme` nav to guide-only; stub or redirect old fixture URLs on Pages; avoid duplicate canonical URLs
-* [ ] Tag `demo-data` (`v0.2.0` suggested after baseline migration) and pin consumer playbooks
-* [ ] Rebuild valentus-theme + facto-stack Pages workflows
+* [x] **Valentus copy approval / cleanup:** trim `valentus-theme` nav to guide-only; document URL change (no HTML redirects on Pages)
+* [x] Tag `demo-data` (`v0.2.0` baseline migration) and pin consumer playbooks
+* [ ] Rebuild valentus-theme + facto-stack Pages workflows (CI on next push to `main`)
+
+Completed with `valentus-theme` commit (see repo history on `main` after cutover push).
+
+== Published URL mapping (Valentus GitHub Pages)
+
+[cols="2,3", options="header"]
+|===
+| Before (in-repo ROOT) | After (`theme-demo` from demo-data)
+
+| `…/valentus-theme/valentus-theme/1.0/` (fixture hub)
+| link:https://antora-supplemental.github.io/valentus-theme/theme-demo/~/[`…/valentus-theme/theme-demo/~/`^]
+
+| `…/valentus-theme/valentus-theme/1.0/typography.html` (and sibling fixture pages)
+| `…/valentus-theme/theme-demo/~/typography/` (same page names under component `theme-demo`, version `~`)
+
+| Guide (unchanged) | `…/valentus-theme/valentus-theme/1.0/guide/…`
+|===
+
+Facto stack demo canonical fixture tree: link:https://antora-supplemental.github.io/facto-stack/theme-demo/~/[`facto-stack/theme-demo/~/`^] (same `demo-data` source, different site URL).

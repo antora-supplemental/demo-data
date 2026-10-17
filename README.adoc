@@ -8,7 +8,7 @@ endif::[]
 Shared **Antora content sources** for demo and docs-preview sites in the `antora-supplemental` org.
 Production org hubs keep their own product documentation; this repository holds reusable mock pages that exercise theme chrome and extensions.
 
-Architecture: link:https://docs.antora-supplemental.org/docs/ROOT/proposals/demo-data-catalog.html[Demo data catalog proposal^].
+Architecture: link:https://docs.antora-supplemental.org/docs/proposals/demo-data-catalog/[Demo data catalog proposal^].
 
 == Three-layer model
 

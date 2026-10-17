@@ -8,4 +8,4 @@ Playbooks add a separate `content.sources` entry per supplement `start_path`. Ba
 | === | === | === |
 | link:site-nav-tree/README.adoc[site-nav-tree] | `@antora-supplemental/site-nav-tree` | `catalog-alpha`, `catalog-beta` multi-root forest |
 
-Authority for naming and when to promote fixtures: link:../../README.adoc[demo-data README] · link:https://docs.antora-supplemental.org/docs/ROOT/proposals/demo-data-catalog.html[Demo data catalog^].
+Authority for naming and when to promote fixtures: link:../../README.adoc[demo-data README] · link:https://docs.antora-supplemental.org/docs/proposals/demo-data-catalog/[Demo data catalog^].
